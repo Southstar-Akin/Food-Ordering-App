@@ -34,7 +34,7 @@ div.item{
     border-bottom: 1px solid #D2D2D2;
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 0.15fr 0.7fr 0.15fr;
+    grid-template-columns: 0.15fr 0.7fr auto;
     align-items: center;
 }
 .icon{
@@ -63,6 +63,7 @@ div.item{
 }
 
 .item button{
+    justify-self: right;
     height: 100px;
     width: 100px;
     font-size: 3em;
