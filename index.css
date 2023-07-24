@@ -1,3 +1,70 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Smythe&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Smythe';
     margin: 0;
-} 
+    padding: 0;
+}
+
+header{
+    width: 100vw;
+    height: auto;
+    background-image: url(/Images/bg-img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 200%;
+    padding: 10%;
+}
+
+header span:first-child{
+    font-size: 190%;
+}
+
+main{
+    padding: 10vh 10vw;
+}
+
+div.item{
+    height: 15.935vh;
+    border-bottom: 1px solid #D2D2D2;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 15% 70% 15%;
+    align-items: center;
+}
+.icon{
+    font-size: 7.66vh;
+}
+.border{
+    border: 2px dotted black;
+}
+.descrip{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.758%;
+    margin-left: 1vw;
+}
+
+.name{
+    font-size: 2.44vh;
+}
+
+.ingredient{
+    font-size: 1.37vh;
+    color: #8B8B8B;
+}
+.price{
+    font-size: 1.72vh;
+}
+
+.item button{
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1.5px solid #DEDEDE;
+}
