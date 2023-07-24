@@ -25,7 +25,8 @@ header span:first-child{
 }
 
 main{
-    padding: 10vh 10vw;
+    padding: 0vh 7.74vw 0vh 7.74vw;
+    display: grid;
 }
 
 div.item{
@@ -54,7 +55,7 @@ div.item{
 }
 
 .ingredient{
-    font-size: 1.37vh;
+    font-size: 2vh;
     color: #8B8B8B;
 }
 .price{
@@ -67,4 +68,51 @@ div.item{
     border-radius: 50%;
     background-color: transparent;
     border: 1.5px solid #DEDEDE;
+}
+
+footer{
+    padding: 4.56vh 7.74vw 4.56vh 7.74vw;
+    min-height: 40vh;
+    height: auto;
+    display: grid;
+}
+
+.footer-span{
+    display: flex;
+    justify-content: center;
+}
+
+hr{
+    height: 2px;
+    border: none;
+    background-color: #393333;
+}
+
+.order-list{
+    display: grid;
+}
+
+.order, .total-order{
+    display: grid;
+   grid-auto-flow: column;
+   justify-content: space-between;
+}
+
+.order-name button{
+    border: none;
+    background-color: transparent;
+    color: #BBB;
+    font-family: Verdana;
+    font-size: 12px;
+    margin-left: 13px;
+}
+
+.C-order{
+    border-radius: 3px;
+    background: #16DB99;
+    color: white;
+    font-family: Verdana;
+    font-style: normal;
+    border: none;
+    font-size: 16px;
 }
