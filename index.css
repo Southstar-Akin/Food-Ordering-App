@@ -34,7 +34,7 @@ div.item{
     border-bottom: 1px solid #D2D2D2;
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 15% 70% 15%;
+    grid-template-columns: 0.15fr 0.7fr 0.15fr;
     align-items: center;
 }
 .icon{
@@ -47,7 +47,7 @@ div.item{
     display: flex;
     flex-direction: column;
     row-gap: 0.758%;
-    margin-left: 1vw;
+    margin-left: 3vw;
 }
 
 .name{
@@ -63,8 +63,9 @@ div.item{
 }
 
 .item button{
-    height: 50%;
-    width: 50%;
+    height: 100px;
+    width: 100px;
+    font-size: 3em;
     border-radius: 50%;
     background-color: transparent;
     border: 1.5px solid #DEDEDE;
@@ -75,6 +76,7 @@ footer{
     min-height: 40vh;
     height: auto;
     display: grid;
+    font-size: 3em;
 }
 
 .footer-span{
@@ -114,5 +116,4 @@ hr{
     font-family: Verdana;
     font-style: normal;
     border: none;
-    font-size: 16px;
 }
