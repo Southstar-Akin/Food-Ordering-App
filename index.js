@@ -34,6 +34,14 @@ function availableOrders() {
     return htmlstring
 }
 
+function cost(){
+    let price = 0
+    orderList.forEach((x) => {
+        price += x.price
+    })
+    return price
+}
+
 function makeOrder(x) {
 
     const order = menuArray.filter((z)=> {
@@ -43,12 +51,14 @@ function makeOrder(x) {
     orderList.push(order)
 }
 
+
 function RemoveOrder(x) {
    const num = orderList.filter((z) => {
         return z.id == x
     })[0]
     orderList.splice(orderList.indexOf(num))
 }
+
 
 function renderOrder(){
     let htmlstring = ''
@@ -73,13 +83,19 @@ function renderOrder(){
     return htmlstring
 }
 
+
 function render(){
     const main = document.getElementById('main')
     const order = document.getElementById('order-list')
+    const price = document.getElementById('totalprice')
     main.innerHTML = availableOrders()
+
     if (orderList){
     order.innerHTML = renderOrder()
     }
+
+    price.innerHTML = `$${cost()}`
+
 }
 
 render()

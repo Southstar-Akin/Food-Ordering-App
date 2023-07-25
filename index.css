@@ -2,7 +2,6 @@
 
 *{
     box-sizing: border-box;
-    font-family: 'Smythe';
     margin: 0;
     padding: 0;
 }
@@ -18,6 +17,7 @@ header{
     flex-direction: column;
     font-size: 200%;
     padding: 10%;
+    font-family: 'Smythe';
 }
 
 header span:first-child{
@@ -25,8 +25,9 @@ header span:first-child{
 }
 
 main{
-    padding: 0vh 7.74vw 0vh 7.74vw;
+    padding: 0vh 7.74vw;
     display: grid;
+    font-family: 'Smythe';
 }
 
 div.item{
@@ -78,11 +79,12 @@ button:focus{
 }
 
 footer{
-    padding: 4.56vh 7.74vw 4.56vh 7.74vw;
+    padding: 4.56vh 7.74vw;
     min-height: 40vh;
     height: auto;
     display: grid;
     font-size: 3em;
+    font-family: 'Smythe';
 }
 
 .footer-span{
@@ -122,4 +124,58 @@ hr{
     font-family: Verdana;
     font-style: normal;
     border: none;
+}
+
+section.modal{
+    font-family: Verdana;
+    height: 46.7vh;
+    width: 86.2vw;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 3.89px;
+    background: #FFF;
+    font-size: 3em;
+    -webkit-box-shadow: 0px 0px 102px 0px rgba(145,142,145,1);
+    -moz-box-shadow: 0px 0px 102px 0px rgba(145,142,145,1);
+    box-shadow: 0px 0px 102px 0px rgba(145,142,145,1);
+}
+.modal div{
+    padding: 0vh 0px;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 0.2fr 0.8fr;
+    height: 100%;
+}
+
+.modal div span{
+    font-weight: bold;
+    display: flex;
+    align-self: center;
+}
+form{
+    padding: 0;
+    height: auto;
+    display: grid;
+    align-content: space-evenly;
+}
+
+form input{
+    padding: 30px 70px;
+    border-radius: 3.89px;
+    border: 1.297px solid #757575;
+}
+
+form input::placeholder{
+    color: #757575;
+    font-size: 2vh;
+}
+
+.pay{
+    border-radius: 3.89px;
+    background: #16DB99;
+    color: white;
 }
