@@ -70,6 +70,11 @@ div.item{
     border-radius: 50%;
     background-color: transparent;
     border: 1.5px solid #DEDEDE;
+    transition: all 0.3s linear;
+}
+
+button:focus{
+    transform: scale(0.7);
 }
 
 footer{
@@ -106,7 +111,7 @@ hr{
     background-color: transparent;
     color: #BBB;
     font-family: Verdana;
-    font-size: 12px;
+    font-size: 2rem;
     margin-left: 13px;
 }
 
