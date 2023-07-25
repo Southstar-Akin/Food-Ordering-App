@@ -15,15 +15,15 @@
 
         </main>
 
-        <section class="modal" id="modal">
+        <section class="modal no-show" id="modal" data-set="set">
             
-            <div>
-                <span>Enter Card Details</span>
-                <form method="get">
-                <input type="text" name="name" id="username" placeholder="Enter your name">
-                <input type="text" name="Card number" id="cardNumber" placeholder="Enter Card Number">
-                <input type="text" name="Cvv" id="cvv" placeholder="Enter CVV">
-                <input type="submit" value="Pay" class="pay">
+            <div data-set="set">
+                <span data-set="set">Enter Card Details</span>
+                <form method="get" data-set="set">
+                <input type="text" name="name" id="username" placeholder="Enter your name" data-set="set">
+                <input type="text" name="Card number" id="cardNumber" placeholder="Enter Card Number" data-set="set">
+                <input type="text" name="Cvv" id="cvv" placeholder="Enter CVV" data-set="set">
+                <input type="submit" value="Pay" class="pay" data-set="set">
                 </form>
             </div>
 
@@ -48,7 +48,7 @@
 
             </div>
 
-            <button class="C-order">Complete Order</button>
+            <button class="C-order" data-order="order">Complete Order</button>
 
         </footer>
 

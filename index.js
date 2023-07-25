@@ -1,15 +1,37 @@
 import { menuArray } from "./data.js";
 
 let orderList = []
+let isModal = false
 
 document.addEventListener("click", (x) =>{
+
+        if (!isModal){
 
         if (x.target.dataset.add) {
        makeOrder(x.target.dataset.add)
         }
         else if (x.target.dataset.remove) {
         RemoveOrder(x.target.dataset.remove)
+        }else if(x.target.dataset.order) {
+        showmodal()
         }
+
+        }else{
+
+        if (x.target.dataset.add) {
+       makeOrder(x.target.dataset.add)
+        }
+        else if (x.target.dataset.remove) {
+        RemoveOrder(x.target.dataset.remove)
+        }else if(x.target.dataset.order) {
+        showmodal()
+        }else if(!x.target.dataset.set)
+        {
+            showmodal()
+        }
+
+        }
+
         render()
     })
 
@@ -99,3 +121,9 @@ function render(){
 }
 
 render()
+
+function showmodal() {
+    const modal = document.getElementById('modal')
+    modal.classList.toggle('no-show')
+    isModal = !isModal
+}
