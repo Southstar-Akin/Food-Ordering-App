@@ -2,6 +2,8 @@ import { menuArray } from "./data.js";
 
 let orderList = []
 let isModal = false
+let username = ''
+let orderup = false
 
 document.addEventListener("click", (x) =>{
 
@@ -13,10 +15,16 @@ document.addEventListener("click", (x) =>{
         else if (x.target.dataset.remove) {
         RemoveOrder(x.target.dataset.remove)
         }else if(x.target.dataset.order) {
-        showmodal()
+        if(orderList.length > 0){
+            showmodal()
         }
-
-        }else{
+        }
+        else if(x.target.dataset.pay){
+            pay(x)
+        }
+        }
+        
+        else{
 
         if (x.target.dataset.add) {
        makeOrder(x.target.dataset.add)
@@ -24,10 +32,24 @@ document.addEventListener("click", (x) =>{
         else if (x.target.dataset.remove) {
         RemoveOrder(x.target.dataset.remove)
         }else if(x.target.dataset.order) {
-        showmodal()
+        if(orderList.length > 0){
+            showmodal()
+        }
         }else if(!x.target.dataset.set)
         {
             showmodal()
+        }else if(x.target.dataset.pay){
+
+        const name = document.getElementById('username')
+        const Card = document.getElementById('cardNumber')
+        const cvv = document.getElementById('cvv')
+
+        if (Card.value && name.value && cvv.value) {
+        username = name.value
+        pay()
+        showmodal()
+        }
+
         }
 
         }
@@ -78,14 +100,14 @@ function RemoveOrder(x) {
    const num = orderList.filter((z) => {
         return z.id == x
     })[0]
-    orderList.splice(orderList.indexOf(num))
+    orderList.splice(orderList.indexOf(num), 1)
 }
 
 
 function renderOrder(){
     let htmlstring = ''
     orderList.forEach( (x) => {
-            htmlstring +=     `           
+            htmlstring +=  `           
             <div class="order">
         
             <div class="order-name">
@@ -98,8 +120,7 @@ function renderOrder(){
             </span>
         
             </div>
-            `    
-        
+            ` 
         }
     )
     return htmlstring
@@ -110,14 +131,19 @@ function render(){
     const main = document.getElementById('main')
     const order = document.getElementById('order-list')
     const price = document.getElementById('totalprice')
+    const footer = document.getElementById('footer')
     main.innerHTML = availableOrders()
 
+    if(!orderup){
     if (orderList){
     order.innerHTML = renderOrder()
     }
 
     price.innerHTML = `$${cost()}`
 
+    }else{
+    footer.innerHTML = pay()
+    }
 }
 
 render()
@@ -127,3 +153,14 @@ function showmodal() {
     modal.classList.toggle('no-show')
     isModal = !isModal
 }
+
+function pay(){
+    orderup = true;
+    let orderu = `
+        <div class="orderup">
+        Thanks ${username}, Your order is on the way
+        </div>
+    `
+    return orderu    
+}
+

@@ -74,8 +74,8 @@ div.item{
     transition: all 0.3s linear;
 }
 
-button:focus{
-    transform: scale(0.7);
+button:active{
+    transform: scale(0.8);
 }
 
 footer{
@@ -178,7 +178,18 @@ form input::placeholder{
     border-radius: 3.89px;
     background: #16DB99;
     color: white;
+    transition: all 0.7s ease-in;
 }
+
 .no-show{
     display: none;
+}
+
+.orderup{
+    border-radius: 3px;
+    background: #ECFDF5;
+    margin: auto;   
+    padding: 60px 120px;
+    color: #065F46;
+    font-family: Smythe;
 }
