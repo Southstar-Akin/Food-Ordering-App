@@ -61,7 +61,8 @@ function availableOrders() {
     let htmlstring = ''
     menuArray.forEach(
         (x) => {
-            htmlstring += `<div class="item">
+            htmlstring += `
+            <div class="item">
 
             <span class="icon">${x.emoji}</span>
             <div class="descrip">
@@ -129,11 +130,12 @@ function renderOrder(){
 
 function render(){
     const main = document.getElementById('main')
-    const order = document.getElementById('order-list')
     const price = document.getElementById('totalprice')
     const footer = document.getElementById('footer')
-    main.innerHTML = availableOrders()
+    const order = document.getElementById('order-list')
 
+    main.innerHTML = availableOrders()
+    
     if(!orderup){
     if (orderList){
     order.innerHTML = renderOrder()
@@ -157,8 +159,8 @@ function showmodal() {
 function pay(){
     orderup = true;
     let orderu = `
-        <div class="orderup">
-        Thanks ${username}, Your order is on the way
+        <div class="orderup" data-aos="fade-left" data-aos-duration="2000">
+        Thank You, ${username}. Your order is on the way
         </div>
     `
     return orderu    

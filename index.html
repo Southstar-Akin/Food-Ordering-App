@@ -2,16 +2,16 @@
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
        <link rel="stylesheet" href="index.css">
-	<script src="index.js" async type="module"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />	<script src="index.js" async type="module"></script>
     </head>
     <body>
 
         <header>
-            <span>Jimmy’s Diner</span>
-            <span>The best burgers and pizzas in town</span>
+            <span data-aos="fade-left" data-aos-duration="1000">Jimmy’s Diner</span>
+            <span data-aos="fade-left" data-aos-duration="1000">The best burgers and pizzas in town</span>
         </header>
 
-        <main id="main">
+        <main id="main" data-aos="fade-left" data-aos-duration="1000">
 
         </main>
 
@@ -29,7 +29,7 @@
 
         </section>
 
-        <footer id="footer">
+        <footer id="footer" data-aos="fade-up" data-aos-duration="1000">
 
 
             <span class="footer-span">Your Order</span>
@@ -54,7 +54,10 @@
         </footer>
 
 
-
-    </body>
+<script src="https://unpkg.com/aos@next/dist/aos.js" ></script>
+<script>
+  AOS.init();
+</script>    
+</body>
 </html>
 
